@@ -41,7 +41,7 @@ df = df[(df['new-money'] > 1000) & (df['new-money'] < 10000) & (df['old-money'] 
 
 # Conectar ao banco de dados SQLite (ou criar um novo)
 
-conn = sqlite3.connect('data/mercadolivre.sql')
+conn = sqlite3.connect('data/mercadolivre.db')
 
 df.to_sql('notebook', conn, if_exists='replace', index=False)
 
